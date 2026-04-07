@@ -1,0 +1,17 @@
+# Node
+node_modules/
+dist/
+
+# Rust / Tauri
+src-tauri/target/
+
+# Go
+backend/bin/
+backend/*.test
+
+# OS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/

@@ -1,0 +1,33 @@
+[package]
+name = "ambient-presence-widget"
+version = "0.1.0"
+description = "Ambient Presence Widget"
+authors = []
+edition = "2021"
+
+[lib]
+name = "ambient_presence_widget_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-shell = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+tokio-tungstenite = { version = "0.24", features = ["native-tls"] }
+futures-util = "0.3"
+log = "0.4"
+
+[profile.dev]
+incremental = true
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+opt-level = "s"
+lto = true
+strip = true

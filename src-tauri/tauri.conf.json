@@ -1,0 +1,39 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devUrl": "http://localhost:1420",
+    "frontendDist": "../dist"
+  },
+  "identifier": "app.actbuddy.ambient-presence-widget",
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Ambient Presence",
+        "width": 200,
+        "height": 260,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "resizable": false,
+        "skipTaskbar": true,
+        "visible": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/icon.png",
+      "icons/icon_32x32.png",
+      "icons/icon_128x128.png",
+      "icons/icon_256x256.png",
+      "icons/icon_512x512.png"
+    ]
+  }
+}
